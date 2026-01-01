@@ -21,9 +21,23 @@ function closeSidebar() {
 // close on menu item click
 document.querySelectorAll(".left_side a").forEach(item => {
   item.addEventListener("click", () => {
-    closeSidebar();
+    
+     if (window.innerWidth < 1200) {
+      closeSidebar();
+    }
   });
 });
+
+// ✅ FIX: Handle screen resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1200) {
+    sidebar.style.left = "0"; // show sidebar
+    icon.classList.replace("bi-x", "bi-list");
+  } else {
+    sidebar.style.left = "-350px"; // hide on mobile
+  }
+});
+
 
   document.addEventListener("DOMContentLoaded", function () {
                     let text = "I'm Web Developer";
