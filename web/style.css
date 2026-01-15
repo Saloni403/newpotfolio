@@ -15,7 +15,7 @@ ul li{
     list-style: none;
 }
 ul li i{
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 .bi-caret-right-fill{
     color: #149ddd;
@@ -404,6 +404,7 @@ transition: opacity 0.3s;
 .portfoliodiv:hover .portfoliolink{
 opacity: 1;
 }
+
 /* contact me */
             .clickable {
   cursor: pointer;
